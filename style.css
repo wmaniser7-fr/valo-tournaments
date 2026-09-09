@@ -1,0 +1,327 @@
+/* --- Global Styles --- */
+:root {
+    --primary-color: #ff4655; /* Valorant Red */
+    --bg-dark: #0f1923;     /* Valorant Dark Navy */
+    --bg-card: #1f2b3e;
+    --bg-alt: #17212e;
+    --text-light: #ece8e1;  /* Valorant Cream/White */
+    --text-muted: #a0aab5;
+    --font-heading: 'Teko', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+/* --- Navigation --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 5%;
+    background-color: rgba(15, 25, 35, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+    clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+}
+
+.btn-primary:hover {
+    background-color: #e03e4d;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-light);
+    border: 1px solid var(--text-light);
+    clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+}
+
+.btn-secondary:hover {
+    background-color: var(--text-light);
+    color: var(--bg-dark);
+}
+
+/* --- Hero Section --- */
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(15, 25, 35, 0.8), rgba(15, 25, 35, 0.9)), 
+                url('https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+    padding: 0 1rem;
+}
+
+.badge {
+    background: rgba(255, 70, 85, 0.2);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    font-family: var(--font-heading);
+    font-size: 5rem;
+    letter-spacing: 3px;
+    margin: 1rem 0;
+    line-height: 1;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* --- Quick Info Bar --- */
+.info-bar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    max-width: 1100px;
+    margin: -3rem auto 0;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 10;
+}
+
+.info-card {
+    background: var(--bg-card);
+    padding: 1.5rem;
+    text-align: center;
+    border-top: 3px solid var(--primary-color);
+}
+
+.info-card h3 {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+.info-card p {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* --- Sections --- */
+.section {
+    padding: 5rem 1rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.alt-bg {
+    max-width: 100%;
+    background-color: var(--bg-alt);
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+}
+
+/* --- Prize Section --- */
+.prize-grid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.prize-card {
+    background: var(--bg-card);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    width: 280px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.prize-card.gold {
+    border: 2px solid #ffd700;
+    transform: scale(1.08);
+}
+
+.prize-card .crown { font-size: 2rem; display: block; }
+.prize-card h3 { font-size: 1.5rem; margin-top: 0.5rem; }
+.prize-card .amount { font-size: 2.2rem; font-weight: bold; color: var(--primary-color); margin-top: 0.5rem; }
+
+/* --- Schedule --- */
+.schedule-timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.timeline-item {
+    display: flex;
+    background: var(--bg-card);
+    padding: 1.5rem;
+    border-left: 4px solid var(--primary-color);
+    gap: 2rem;
+    align-items: center;
+}
+
+.timeline-item .date {
+    font-weight: 700;
+    color: var(--primary-color);
+    min-width: 140px;
+}
+
+.timeline-item h4 { font-size: 1.2rem; }
+.timeline-item p { color: var(--text-muted); font-size: 0.95rem; }
+
+/* --- Rules Section --- */
+.rules-container {
+    background: var(--bg-card);
+    padding: 2rem 3rem;
+    border-radius: 4px;
+}
+
+.rules-container ul {
+    list-style-type: square;
+    padding-left: 1.5rem;
+}
+
+.rules-container li {
+    margin-bottom: 1rem;
+    color: var(--text-muted);
+}
+
+.rules-container strong {
+    color: var(--text-light);
+}
+
+/* --- Form --- */
+.register-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.form-group input, 
+.form-group textarea {
+    padding: 0.8rem;
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-light);
+    font-family: inherit;
+    border-radius: 4px;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.submit-btn {
+    margin-top: 1rem;
+    width: 100%;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #090f15;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hero h1 { font-size: 3.5rem; }
+    .prize-card.gold { transform: scale(1); }
+    .timeline-item { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+}
