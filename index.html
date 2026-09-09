@@ -18,7 +18,25 @@
             <li><a href="#schedule">Schedule</a></li>
             <li><a href="#rules">Rules</a></li>
         </ul>
-        <a href="#register" class="btn btn-primary nav-btn">Register Now</a>
+        <a href="#register" class="btn btn-primary nav-btn"><form class="register-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <div class="form-group">
+        <label for="team-name">Team Name</label>
+        <input type="text" id="team-name" name="team_name" placeholder="e.g. Sentinels" required>
+    </div>
+    <div class="form-group">
+        <label for="captain-email">Captain's Email</label>
+        <input type="email" id="captain-email" name="email" placeholder="captain@example.com" required>
+    </div>
+    <div class="form-group">
+        <label for="discord-tag">Captain's Discord Tag</label>
+        <input type="text" id="discord-tag" name="discord_tag" placeholder="Username#0000" required>
+    </div>
+    <div class="form-group">
+        <label for="roster">Roster (5 Riot IDs)</label>
+        <textarea id="roster" name="roster" rows="4" placeholder="Player1#TAG&#10;Player2#TAG" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary submit-btn">Submit Registration</button>
+</form> </a>
     </nav>
 
     <!-- Hero Section -->
@@ -60,16 +78,16 @@
         <div class="prize-grid">
             <div class="prize-card silver">
                 <h3>2nd Place</h3>
-                <p class="amount">$1,500</p>
+                <p class="amount">LOLA</p>
             </div>
             <div class="prize-card gold">
                 <span class="crown">👑</span>
                 <h3>1st Place</h3>
-                <p class="amount">$2,500</p>
+                <p class="amount">Rs500</p>
             </div>
             <div class="prize-card bronze">
                 <h3>3rd Place</h3>
-                <p class="amount">$1,000</p>
+                <p class="amount">LOLA</p>
             </div>
         </div>
     </section>
