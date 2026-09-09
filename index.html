@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALORANT Showdown 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@600&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">VALORANT <span>SHOWDOWN</span></div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#prizes">Prizes</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#rules">Rules</a></li>
+        </ul>
+        <a href="#register" class="btn btn-primary nav-btn">Register Now</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <span class="badge">5v5 Tournament • Single Elimination</span>
+            <h1>DEFY THE LIMITS</h1>
+            <p>Compete against the best teams for a total prize pool of <strong>$5,000</strong>.</p>
+            <div class="hero-btns">
+                <a href="#register" class="btn btn-primary">Claim Your Spot</a>
+                <a href="#about" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Quick Info Cards -->
+    <section class="info-bar">
+        <div class="info-card">
+            <h3>Date</h3>
+            <p>October 15 - 17, 2026</p>
+        </div>
+        <div class="info-card">
+            <h3>Mode</h3>
+            <p>5v5 Competitive</p>
+        </div>
+        <div class="info-card">
+            <h3>Entry Fee</h3>
+            <p>Free Entry</p>
+        </div>
+        <div class="info-card">
+            <h3>Slots</h3>
+            <p>32 Teams Max</p>
+        </div>
+    </section>
+
+    <!-- Prize Section -->
+    <section id="prizes" class="section">
+        <h2 class="section-title">Prize Pool</h2>
+        <div class="prize-grid">
+            <div class="prize-card silver">
+                <h3>2nd Place</h3>
+                <p class="amount">$1,500</p>
+            </div>
+            <div class="prize-card gold">
+                <span class="crown">👑</span>
+                <h3>1st Place</h3>
+                <p class="amount">$2,500</p>
+            </div>
+            <div class="prize-card bronze">
+                <h3>3rd Place</h3>
+                <p class="amount">$1,000</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule & Format -->
+    <section id="schedule" class="section alt-bg">
+        <h2 class="section-title">Tournament Schedule</h2>
+        <div class="schedule-timeline">
+            <div class="timeline-item">
+                <div class="date">Day 1 — Oct 15</div>
+                <div class="details">
+                    <h4>Round of 32 & Round of 16</h4>
+                    <p>Best of 1 (Bo1) Matches</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="date">Day 2 — Oct 16</div>
+                <div class="details">
+                    <h4>Quarter-finals & Semi-finals</h4>
+                    <p>Best of 3 (Bo3) Matches</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="date">Day 3 — Oct 17</div>
+                <div class="details">
+                    <h4>Grand Finals & 3rd Place Match</h4>
+                    <p>Best of 5 (Bo5) Grand Final</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rules Section -->
+    <section id="rules" class="section">
+        <h2 class="section-title">Rules & Requirements</h2>
+        <div class="rules-container">
+            <ul>
+                <li><strong>Team Size:</strong> 5 Main Players + 1 Optional Substitute.</li>
+                <li><strong>Anti-Cheat:</strong> Vanguard Anti-Cheat must be active for all players.</li>
+                <li><strong>Server:</strong> Default server will be agreed upon by team captains (e.g., NA East / EU Central).</li>
+                <li><strong>Check-In:</strong> Team captains must check in on Discord 30 minutes before match time.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="register" class="section alt-bg">
+        <h2 class="section-title">Register Your Team</h2>
+        <form class="register-form" onsubmit="event.preventDefault(); alert('Registration Submitted!');">
+            <div class="form-group">
+                <label for="team-name">Team Name</label>
+                <input type="text" id="team-name" placeholder="e.g. Sentinels" required>
+            </div>
+            <div class="form-group">
+                <label for="captain-email">Captain's Email</label>
+                <input type="email" id="captain-email" placeholder="captain@example.com" required>
+            </div>
+            <div class="form-group">
+                <label for="discord-tag">Captain's Discord Tag</label>
+                <input type="text" id="discord-tag" placeholder="Username#0000" required>
+            </div>
+            <div class="form-group">
+                <label for="roster">Roster (5 Riot IDs)</label>
+                <textarea id="roster" rows="4" placeholder="Player1#TAG&#10;Player2#TAG&#10;Player3#TAG&#10;Player4#TAG&#10;Player5#TAG" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary submit-btn">Submit Registration</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 VALORANT Showdown. Not affiliated with Riot Games.</p>
+    </footer>
+
+</body>
+</html>
